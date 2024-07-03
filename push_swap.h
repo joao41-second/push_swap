@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 11:44:14 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/03 14:36:19 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/03 15:13:17 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,8 @@ void ft_sa(n_status **list_a,n_status **list_b);
 void ft_sb(n_status **list_a,n_status **list_b); //not  tested
 
 void ft_ss(n_status **list_a,n_status **list_b); //not  tested
+
+void ft_pb(n_status **list_a,n_status **list_b);
 
 
 

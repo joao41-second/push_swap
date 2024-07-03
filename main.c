@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 14:18:31 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/03 14:22:15 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/03 16:01:59 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,7 +42,8 @@ void base_control(char **elements,int len)
 	list_a = ft_node_start(list_a);
 	
 	ft_print_list(list_a,list_b);
-	ft_sa(&list_a,&list_b);
+	ft_pb(&list_a,&list_b);
+	ft_pb(&list_a,&list_b);
 	ft_printf("\n");
 	ft_print_list(list_a,list_b);
 	
