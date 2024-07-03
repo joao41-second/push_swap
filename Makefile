@@ -6,13 +6,13 @@
 #    By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 06:17:31 by jperpect          #+#    #+#              #
-#    Updated: 2024/07/02 15:11:49 by jperpect         ###   ########.fr        #
+#    Updated: 2024/07/03 14:35:30 by jperpect         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FLGS = -Wall -Wextra -Werror
 
-FILES = main.c list_f.c ft_validate_elements_list.c
+FILES = main.c list_f.c list_f_2.c ft_validate_elements_list.c mvs/ft_s.c 
  
 SRCS = $(FILES:.c=.o)
 
@@ -35,7 +35,7 @@ all: $(NAME)
 
 $(NAME) : $(SRCS)
 	cd libft && make compile && make 
-	cc   $(SRCS) $(LIB) -o $(NAME)
+	cc   $(FLGS) $(SRCS) $(LIB) -o $(NAME)
 
 	
 bonus: $(OBJECT_B) $(NAME)

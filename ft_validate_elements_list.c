@@ -1,5 +1,16 @@
-#include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_validate_elements_list.c                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/03 09:09:46 by jperpect          #+#    #+#             */
+/*   Updated: 2024/07/03 14:20:55 by jperpect         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "push_swap.h"
 
 int valid_char(char **elements,int len)
 {
@@ -22,6 +33,30 @@ int valid_char(char **elements,int len)
 	return(1);
 }
 
+n_status *valid_dob(n_status *list)
+{
+	n_status *copy;
+	list = ft_node_start(copy);
+	copy = list;
+ 	while(list != NULL)
+ 	{
+			
+		while(copy != NULL)
+		{
+			if(list->number == copy->number && list->index != copy->index)
+				return(NULL);
+			if (copy->next == NULL)
+				break;
+			copy = copy->next;
+			
+		}
+		copy = ft_node_start(copy);
+ 		if(list->next == NULL)
+ 			break;
+ 		list = list->next;	
+ 	}
+	return(list);
+}
 
 n_status *validate_elements_list(char **elements,int len)
 {
@@ -37,7 +72,6 @@ n_status *validate_elements_list(char **elements,int len)
 		int temp;
 
 		temp = ft_atol(elements[i]);	
-		ft_printf("%d",temp);
 		if (i == 0)
 			l_temp = ft_node_new(temp,i);
 		else
@@ -48,6 +82,5 @@ n_status *validate_elements_list(char **elements,int len)
 		if (temp == 0 && elements[i][0] != '0' )
 			return(ft_node_clear(l_temp));
 	}
-	 	ft_printf("%d = ola ",i);
-	return(l_temp);
+	return(valid_dob(l_temp));
 }

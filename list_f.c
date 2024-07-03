@@ -1,5 +1,16 @@
-#include "push_swap.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   list_f.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/07/03 09:04:01 by jperpect          #+#    #+#             */
+/*   Updated: 2024/07/03 14:16:33 by jperpect         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
+#include "push_swap.h"
 
 
 n_status *ft_node_new(long int n, long int index)
@@ -21,9 +32,9 @@ void	ft_node_add_front(n_status **lst, n_status *new)
 	n_status *temp;
 	if (lst == NULL || new == NULL)
 		return ;
-	new->next = *lst;
+	new->previous = *lst;
 	temp = *lst;
-	temp->previous = new;
+	temp->next = new;
 	*lst = new;
 	
 }
@@ -39,6 +50,34 @@ void *ft_node_clear(n_status *tes)
 		tes = temp;
 	}
 	return(NULL);
+}
+
+n_status *ft_node_start(n_status *list)
+{
+	while(list != NULL)
+	{	
+		if(list->previous == NULL)
+			break;
+		list = list->previous;	
+	}
+	return(list);
+}
+
+n_status *ft_new_list_null(n_status *list,int len)
+{
+	n_status *new;
+	int i;
+	int env;
+	env = 0;
+	i =0;
+	list = ft_node_new(env,i);
+	while(++i < len)
+	{
+		new	= ft_node_new(env,i);
+		ft_node_add_front(&list,new);
+	}
+	return(list);
+	
 }
 
 
