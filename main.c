@@ -16,15 +16,60 @@
 static void free_split(char **str)
 {
 	int i;
-	i = -1;
+	i = -1;      
 	while(str[++i] != NULL)
-	{
+	{   
 		free(str[i]);
 	}
 	free(str);
 	
 }
 
+void met_b(n_status **list_a,n_status **list_b,int len)
+{
+	if(*list_a == NULL)
+		return;
+	n_status **start; 
+	int test;
+	test =(*list_b)->number;
+	start = list_a;
+	int i;
+	i = -1;
+	while(i <= len)
+	{
+		//ft_printf("%d > %d\n",test, (*list_a)->number);
+		if( (*list_a)->number < test)
+		{
+			//ft_print_list(start,*list_b);
+
+			ft_pa(list_a,list_b);
+			i++;	
+		}
+		else 
+		{
+			ft_ra(list_a,list_b);
+			i--;
+		}
+		 if (list_menor(test,*list_a) == false  || (*list_a)->next == NULL)
+		 {
+			break;
+		 }	
+	}
+}
+
+
+void algorit(n_status **list_a,n_status **list_b ,int len)
+{
+	ft_pa(list_a,list_b);
+	
+	met_b(list_a,list_b,len);
+
+	// ft_pa(list_a,list_b);
+	// met_b(list_a,list_b,len);
+
+
+}
+ 
 
 void base_control(char **elements,int len)
 {
@@ -42,8 +87,9 @@ void base_control(char **elements,int len)
 	list_a = ft_node_start(list_a);
 	
 	ft_print_list(list_a,list_b);
-	ft_pb(&list_a,&list_b);
-	ft_pb(&list_a,&list_b);
+	
+	algorit(&list_a,&list_b,len);
+	
 	ft_printf("\n");
 	ft_print_list(list_a,list_b);
 	

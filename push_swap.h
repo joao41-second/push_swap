@@ -16,8 +16,8 @@
 #include "libft/libft/libft.h"
 #include "libft/printf/ft_printf.h"
  
-
- 
+#define true 1
+#define false  0
 
 typedef struct t_status
 {
@@ -66,6 +66,9 @@ n_status *valid_dob(n_status *list);
 n_status *validate_elements_list(char **elements,int len);
 
 
+
+int list_menor(int i ,n_status *list);
+
 /*
   movimentos 
   
@@ -78,6 +81,8 @@ void ft_sb(n_status **list_a,n_status **list_b); //not  tested
 void ft_ss(n_status **list_a,n_status **list_b); //not  tested
 
 void ft_pb(n_status **list_a,n_status **list_b);
+void ft_pa(n_status **list_a,n_status **list_b);
+
 
 
 

@@ -13,7 +13,8 @@
 #include "push_swap.h"
 
 int valid_char(char **elements,int len)
-{
+{	
+
 	int i;
 	int d;
 	i =-1;

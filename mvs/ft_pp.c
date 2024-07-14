@@ -12,41 +12,56 @@
 
 #include "../push_swap.h"
 
+
+void ft_start(n_status **list_a,n_status **list_b)
+{
+	n_status *temp;
+	n_status *test;
+
+	if(*list_a == NULL)
+		return;
+
+	test = *list_a;
+	
+	temp = (*list_a)->next;
+	if(temp != NULL)
+		temp->previous = NULL;
+	test->next = NULL;
+	test->previous = NULL;
+	if(*list_b)
+	{
+
+		ft_node_add_inver(list_b,test);
+	}
+	else
+		*list_b = test;	
+	
+	 
+	 *list_a = temp;
+
+	
+	
+
+}
+
+
 void ft_pa(n_status **list_a,n_status **list_b)
 {
-	n_status *a;
-	n_status *b;
-	n_status *temp;
-	
-	a = *list_a;
-	b = *list_b;
-	if(b == NULL)
-		return;
-	
+	*list_a = ft_node_start(*list_a);
+	if(*list_b != NULL)
+		*list_b = ft_node_start(*list_b);
+	ft_start(list_a,list_b);
+	ft_printf("pa");
 }
+
 
 void ft_pb(n_status **list_a,n_status **list_b)
 {
-	n_status *a;
-
-	
-	a = *list_a;
-	*list_a = (*list_a)->next;
-	if(*list_a)
-		(*list_a)->previous = NULL;
-
-	if (*list_a == NULL)
+	if (list_b == NULL)
 		return;
-	if (*list_b == NULL)
-	{
-		  *list_b = a;
-		  (*list_b)->previous = NULL;
-		  (*list_b)->next = NULL;
-	}
-	else
-	{
-		a->next = NULL;
-		a->previous = NULL;
-		ft_node_add_front(list_b,a);
-	}
+ 	*list_a = ft_node_start(*list_a);
+	if(*list_b != NULL)
+		*list_b = ft_node_start(*list_b);
+	ft_start(list_b,list_a);
 }
+

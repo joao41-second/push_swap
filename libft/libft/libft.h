@@ -14,7 +14,7 @@
 # define LIBFT_H
 
 # include <aio.h>
-# include <bsd/string.h>
+
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>

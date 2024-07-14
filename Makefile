@@ -12,7 +12,7 @@
 
 FLGS = -Wall -Wextra -Werror
 
-FILES = main.c list_f.c list_f_2.c ft_validate_elements_list.c mvs/ft_s.c mvs/ft_pp.c 
+FILES = main.c list_f.c list_f_2.c ft_validate_elements_list.c mvs/ft_s.c mvs/ft_pp.c mvs/ft_rrr.c valid_nb.c
  
 SRCS = $(FILES:.c=.o)
 

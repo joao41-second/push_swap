@@ -54,13 +54,18 @@ void *ft_node_clear(n_status *tes)
 
 n_status *ft_node_start(n_status *list)
 {
+	if(list->previous != NULL ){
 	while(list != NULL)
 	{	
 		if(list->previous == NULL)
 			break;
 		list = list->previous;	
 	}
+	
+	}
 	return(list);
+	
+	
 }
 
 n_status *ft_new_list_null(n_status *list,int len)
