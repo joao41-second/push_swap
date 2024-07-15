@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 11:44:14 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/03 15:13:17 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/15 15:57:48 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ n_status *ft_node_start(n_status *list);
 */
 n_status *ft_new_list_null(n_status *list,int len);
 
+void	ft_node_add_inver(n_status **lst, n_status *new);
+
 void ft_print_list(n_status *list ,n_status *list_b);
 
 
@@ -68,6 +70,12 @@ n_status *validate_elements_list(char **elements,int len);
 
 
 int list_menor(int i ,n_status *list);
+
+
+
+void algorit(n_status **list_a,n_status **list_b ,int len);	
+
+
 
 /*
   movimentos 
@@ -83,6 +91,11 @@ void ft_ss(n_status **list_a,n_status **list_b); //not  tested
 void ft_pb(n_status **list_a,n_status **list_b);
 void ft_pa(n_status **list_a,n_status **list_b);
 
+void ft_ra(n_status **list_a,n_status **list_b);
+void ft_rb(n_status **list_a,n_status **list_b);
+
+void ft_rra(n_status **list_a,n_status **list_b);
+void ft_rrb(n_status **list_a,n_status **list_b);
 
 
 

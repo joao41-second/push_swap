@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 14:18:31 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/03 16:01:59 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/15 15:52:32 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,17 +58,6 @@ void met_b(n_status **list_a,n_status **list_b,int len)
 }
 
 
-void algorit(n_status **list_a,n_status **list_b ,int len)
-{
-	ft_pa(list_a,list_b);
-	
-	met_b(list_a,list_b,len);
-
-	// ft_pa(list_a,list_b);
-	// met_b(list_a,list_b,len);
-
-
-}
  
 
 void base_control(char **elements,int len)

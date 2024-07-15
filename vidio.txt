@@ -1,1 +1,18 @@
 https://www.youtube.com/watch?v=Hoixgm4-P4M
+
+regras:
+
+
+1: pivo = list size \ 2
+
+a contar da esquerda vamos procura um numero maior que o pivo 1
+
+e a contar da direita vamos contar um menor que o pivo	      2
+
+
+
+se nao hover maior que o pivo o numero anterior da lista passa a pivo. 
+
+se o index do 2 for < que o do 1 o 1 passa a pivo 
+
+passar pelo verificador de ordem se ele diser que nao esta ordenado mandar chamar de novo a funcao

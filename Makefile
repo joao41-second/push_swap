@@ -6,13 +6,14 @@
 #    By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 06:17:31 by jperpect          #+#    #+#              #
-#    Updated: 2024/07/03 15:15:53 by jperpect         ###   ########.fr        #
+#    Updated: 2024/07/15 15:54:16 by jperpect         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FLGS = -Wall -Wextra -Werror
 
-FILES = main.c list_f.c list_f_2.c ft_validate_elements_list.c mvs/ft_s.c mvs/ft_pp.c mvs/ft_rrr.c valid_nb.c
+FILES = main.c list_f.c list_f_2.c ft_validate_elements_list.c mvs/ft_s.c mvs/ft_pp.c mvs/ft_rrr.c \
+	valid_nb.c Quick_Sort/start.c
  
 SRCS = $(FILES:.c=.o)
 

@@ -40,3 +40,19 @@ void	ft_node_add_inver(n_status **lst, n_status *new)
 	*lst = new;
 	
 }
+
+n_status *ft_node_end(n_status *list)
+{
+	if(list->next != NULL ){
+	while(list != NULL)
+	{	
+		if(list->next == NULL)
+			break;
+		list = list->next;	
+	}
+	
+	}
+	return(list);
+	
+	
+}
