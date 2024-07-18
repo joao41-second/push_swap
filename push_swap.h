@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 11:44:14 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/15 15:57:48 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/17 13:58:26 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,15 @@ n_status *validate_elements_list(char **elements,int len);
 
 int list_menor(int i ,n_status *list);
 
-
+//quick_sort
 
 void algorit(n_status **list_a,n_status **list_b ,int len);	
+
+int set_start_pivot( n_status *list,int len);
+
+int set_start_new_pivot( n_status *list,int len);
+
+int valid_pivot(n_status *list,int len);
 
 
 
