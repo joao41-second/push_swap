@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 13:51:34 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/18 10:13:07 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/18 10:43:02 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,3 +91,7 @@ int locat_pivot(int pivot,n_status *list)
 	}
 	return(i);
 }
+
+
+
+

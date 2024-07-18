@@ -72,22 +72,64 @@ int cange_elemente(n_status **list_a,n_status **list_b,int chek_index_menor ,int
 		i_save++;
 	}
 }
-int cange_pivot(n_status **list_a,n_status **list_b,int  chek_index_maior )
+int cange_pivot(n_status **list_a,n_status **list_b,int  chek_index_maior,int pivot )
 {
-	ft_rra(list_a,list_b);
-	ft_pa(list_a,list_b);
-	int i ;
-	i = -1;
-	while(++i != chek_index_maior)
+	int loca = locat_pivot(pivot,*list_a);
+	ft_printf("o size do pivot e = %d e size do maior %d",loca,chek_index_maior);
+	if(loca == 1 && chek_index_maior == 0)
 	{
-		ft_pa(list_a,list_b);
+		ft_sa(list_a,list_b);
+		return(1);
 	}
-	ft_ra(list_a,list_b);
-	ft_rrb(list_a,list_b);
-	while(i-- >= 0)
+
+	if (loca > chek_index_maior)
 	{
-		ft_pb(list_a,list_b);
+		if ( loca!= list_size(*list_a))
+		{
+			int i ;
+
+			i = -1;
+			while(++i != chek_index_maior)
+			{
+				ft_pa(list_a,list_b);
+			}
+			ft_ra(list_a,list_b);
+			i--;
+			while(++i != loca)
+			{
+				ft_pa(list_a,list_b);
+			}
+			ft_rra(list_a,list_b);
+			ft_rb(list_a,list_b);
+			while(i-- > 0)
+			{
+				if(i == chek_index_maior)
+				{
+					ft_rrb(list_a,list_b);
+				}
+				ft_pb(list_a,list_b);
+			}
+		}
+		else
+		{
+			ft_rra(list_a,list_b);
+			ft_pa(list_a,list_b);
+			int i ;
+			i = -1;
+			while(++i != chek_index_maior)
+			{
+				ft_pa(list_a,list_b);
+			}
+			ft_ra(list_a,list_b);
+			ft_rrb(list_a,list_b);
+			while(i-- >= 0)
+			{
+				ft_pb(list_a,list_b);
+			}
+		}
 	}
+	
+	
 }
 
 int aplic_quick_sort(n_status **list_a,n_status **list_b,int *pivot,int *len)
@@ -131,11 +173,8 @@ int aplic_quick_sort(n_status **list_a,n_status **list_b,int *pivot,int *len)
 		if (pivot[0] != valid_pivot(*list_a,len[0]) )
 		{
 			pivot[0] = valid_pivot(*list_a,len[0]);
-		}else
-		{
-			movs += cange_pivot(list_a,list_b,chek_index_maior);
 		}
-		
+	 	cange_pivot(list_a,list_b,chek_index_maior,pivot[0]);
 		ft_printf("ola ue pivot - %d",pivot[0]);
 	}
 	return(movs);
@@ -153,6 +192,8 @@ void algorit(n_status **list_a,n_status **list_b ,int len)
 
 	int i ;
 	i = -1;
+
+
 
 	ft_printf("ola muvs %d",set_start_pivot(*list_a,len));
 	pivot = set_start_pivot(*list_a,len);
@@ -179,21 +220,16 @@ void algorit(n_status **list_a,n_status **list_b ,int len)
 	//ft_printf(" o max e %d",set_start_new_pivot(*list_a,len));
 	
 	//	ft_print_list(*list_a,*list_b);
+
+	
+	
+	while(comfirm_list(*list_a)== 1) 
+	{
+		aplic_quick_sort(list_a,list_b,&pivot,&len);
+	}
+
+	
 		
-
-
-		aplic_quick_sort(list_a,list_b,&pivot,&len);	
-		ft_print_list(*list_a,*list_b);
-		aplic_quick_sort(list_a,list_b,&pivot,&len);	
-		ft_print_list(*list_a,*list_b);
-		aplic_quick_sort(list_a,list_b,&pivot,&len);	
-		// ft_print_list(*list_a,*list_b);
-		// aplic_quick_sort(list_a,list_b,&pivot,&len);	
-		// ft_print_list(*list_a,*list_b);
-		// aplic_quick_sort(list_a,list_b,&pivot,&len);	
-		// ft_print_list(*list_a,*list_b);
-		// aplic_quick_sort(list_a,list_b,&pivot,&len);	
-		// ft_print_list(*list_a,*list_b);
 		
 
 

@@ -56,3 +56,15 @@ n_status *ft_node_end(n_status *list)
 	
 	
 }
+int list_size(n_status *list)
+{
+		int i ;
+	i = 0;
+	while(list->next != NULL)
+	{
+		 i++;
+		list = list->next;
+		
+	}
+	return(i);
+}

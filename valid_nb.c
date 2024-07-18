@@ -36,3 +36,20 @@ int list_menor(int i ,n_status *list)
     }
     return(false);
 }
+
+
+
+int comfirm_list(n_status *list)
+{
+    int n = list->number;
+    list = list->next;
+    while(list->next != NULL)
+    {
+        if (n >list->number)
+        {
+            return(1);
+        }
+        list = list->next;
+    }
+    return(0);
+}
