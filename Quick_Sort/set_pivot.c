@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 13:51:34 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/18 10:43:02 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/18 12:07:30 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,17 +39,14 @@ int set_max(n_status *list,int len)
 	int max;
 	int i ;
 	i = -1;
+	
 	max = list->number;
 	while(++i != len-1)
 	{
-		
-	
 		 list = list->next;
 		 	
 			if (max < list->number)
 			max = list->number;
-
-		
 	}
 	return(max);
 	

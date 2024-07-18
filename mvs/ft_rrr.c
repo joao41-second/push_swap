@@ -45,18 +45,19 @@ void ft_ra(n_status **list_a,n_status **list_b)
 void ft_rb(n_status **list_a,n_status **list_b)
 {
 
-    // *list_a = ft_node_start(*list_a);
-	// *list_b = ft_node_start(*list_b);
+ 
     ruta(list_b);
+    ft_printf("rb");
 
 }
 
 void ft_rr(n_status **list_a,n_status **list_b)
 {
-    // *list_a = ft_node_start(*list_a);
-	// *list_b = ft_node_start(*list_b);
+   
     ruta(list_a);
     ruta(list_a);
+       ft_printf("rr");
+
 
 }
 
@@ -64,16 +65,16 @@ void ft_rr(n_status **list_a,n_status **list_b)
 void ruta_ult(n_status** list_a)
 {
     if(*list_a == NULL)
-    return;
+        return;
  n_status *temp = *list_a;
  n_status *ult;
  
  while(temp != NULL){
     if(temp->next == NULL)
     {
-        ult = temp;
+         ult = temp;
         temp = temp->previous;
-        temp->next = NULL;
+         temp->next = NULL;
         break;
     }
     temp = temp->next;
@@ -89,10 +90,16 @@ void ruta_ult(n_status** list_a)
 
 void ft_rra(n_status **list_a,n_status **list_b)
 {
- ruta_ult(list_a);   
+  if ( list_size(*list_a) != 0)
+    ruta_ult(list_a);      
+ 
+ ft_printf("rra\n");
 }
 
 void ft_rrb(n_status **list_a,n_status **list_b)
 {
- ruta_ult(list_b);   
+    // ft_printf("rrb %d- \n",list_size(*list_b));
+   if ( list_size(*list_b) != 0)
+    ruta_ult(list_b);        
+  ft_printf("rrb\n");
 }

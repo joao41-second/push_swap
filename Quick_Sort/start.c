@@ -55,6 +55,7 @@ int cange_elemente(n_status **list_a,n_status **list_b,int chek_index_menor ,int
 	ft_rrb(list_a,list_b);
 	ft_pa(list_a, list_b);
 	ft_sb(list_a, list_b);
+	ft_print_list(*list_a,*list_b);	
 	ft_pb(list_a, list_b);
 
 	i--;	
@@ -91,6 +92,7 @@ int cange_pivot(n_status **list_a,n_status **list_b,int  chek_index_maior,int pi
 			i = -1;
 			while(++i != chek_index_maior)
 			{
+				
 				ft_pa(list_a,list_b);
 			}
 			ft_ra(list_a,list_b);
@@ -101,24 +103,28 @@ int cange_pivot(n_status **list_a,n_status **list_b,int  chek_index_maior,int pi
 			}
 			ft_rra(list_a,list_b);
 			ft_rb(list_a,list_b);
-			while(i-- > 0)
+			while(i > 0)
 			{
 				if(i == chek_index_maior)
 				{
 					ft_rrb(list_a,list_b);
 				}
 				ft_pb(list_a,list_b);
+				i--;
 			}
 		}
 		else
 		{
-			ft_rra(list_a,list_b);
+			
+			 ft_rra(list_a,list_b);
 			ft_pa(list_a,list_b);
 			int i ;
 			i = -1;
 			while(++i != chek_index_maior)
 			{
+					
 				ft_pa(list_a,list_b);
+			
 			}
 			ft_ra(list_a,list_b);
 			ft_rrb(list_a,list_b);
@@ -128,7 +134,6 @@ int cange_pivot(n_status **list_a,n_status **list_b,int  chek_index_maior,int pi
 			}
 		}
 	}
-	
 	
 }
 
@@ -193,7 +198,7 @@ void algorit(n_status **list_a,n_status **list_b ,int len)
 	int i ;
 	i = -1;
 
-
+	
 
 	ft_printf("ola muvs %d",set_start_pivot(*list_a,len));
 	pivot = set_start_pivot(*list_a,len);
@@ -217,19 +222,19 @@ void algorit(n_status **list_a,n_status **list_b ,int len)
 		movs++;
 	}
 
-	//ft_printf(" o max e %d",set_start_new_pivot(*list_a,len));
 	
-	//	ft_print_list(*list_a,*list_b);
 
-	
 	
 	while(comfirm_list(*list_a)== 1) 
 	{
 		aplic_quick_sort(list_a,list_b,&pivot,&len);
+		ft_print_list(*list_a,*list_b);
+		
 	}
 
 	
-		
+	
+	//	cange_pivot(list_a,list_b,0,4);
 		
 
 
