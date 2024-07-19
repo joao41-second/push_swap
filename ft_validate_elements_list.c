@@ -6,15 +6,14 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:09:46 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/03 14:20:55 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/19 11:29:44 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
 int valid_char(char **elements,int len)
-{	
-
+{
 	int i;
 	int d;
 	i =-1;
@@ -37,8 +36,9 @@ int valid_char(char **elements,int len)
 n_status *valid_dob(n_status *list)
 {
 	n_status *copy;
-	list = ft_node_start(copy);
+	
 	copy = list;
+	list = ft_node_start(copy);
  	while(list != NULL)
  	{
 			

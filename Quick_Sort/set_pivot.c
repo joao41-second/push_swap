@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/17 13:51:34 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/19 10:08:31 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/19 11:37:26 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,6 @@ int set_max(n_status *list,int len)
 
 int valid_pivot(n_status *list,int len)
 {
-	int max;
 	int i ;
 	i = 0;
 	//ft_printf("\033[H\033[J");
