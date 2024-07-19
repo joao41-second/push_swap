@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 11:44:14 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/17 13:58:26 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/18 15:51:30 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
  
 #define true 1
 #define false  0
+
+ extern int variavel;
 
 typedef struct t_status
 {
