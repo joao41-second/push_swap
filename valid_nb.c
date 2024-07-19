@@ -52,11 +52,6 @@ int comfirm_list(n_status *list)
         {
             return(1);
         }
-        
-       
-        
     }
-
- 
     return(0);
 }

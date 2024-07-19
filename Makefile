@@ -6,7 +6,7 @@
 #    By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 06:17:31 by jperpect          #+#    #+#              #
-#    Updated: 2024/07/17 13:51:57 by jperpect         ###   ########.fr        #
+#    Updated: 2024/07/19 11:24:18 by jperpect         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,6 +33,8 @@ NAME = push_swap
 #.SILENT:
 
 all: $(NAME)
+# %.o:%.c 
+# 	cc -c $(FLGS) -o $@ $<
 
 $(NAME) : $(SRCS)
 	cd libft && make compile && make 

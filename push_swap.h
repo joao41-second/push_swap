@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 11:44:14 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/18 15:51:30 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/19 11:25:08 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,8 @@
 #define true 1
 #define false  0
 
- extern int variavel;
+extern int variavel;
+
 
 typedef struct t_status
 {
@@ -58,11 +59,21 @@ n_status *ft_node_start(n_status *list);
 * @param list in one node
 * @return list in intial mode  
 */
+
+n_status *ft_node_end(n_status *list);
+/**
+* @brief retrur list in final node 
+* @param list in one node
+* @return list in final mode  
+*/
+
 n_status *ft_new_list_null(n_status *list,int len);
 
 void	ft_node_add_inver(n_status **lst, n_status *new);
 
 void ft_print_list(n_status *list ,n_status *list_b);
+
+int list_size(n_status *list);
 
 
 n_status *valid_dob(n_status *list);
@@ -72,16 +83,22 @@ n_status *validate_elements_list(char **elements,int len);
 
 
 int list_menor(int i ,n_status *list);
+int comfirm_list(n_status *list);
 
 //quick_sort
 
 void algorit(n_status **list_a,n_status **list_b ,int len);	
+
+
 
 int set_start_pivot( n_status *list,int len);
 
 int set_start_new_pivot( n_status *list,int len);
 
 int valid_pivot(n_status *list,int len);
+
+int locat_pivot(int pivot,n_status *list);
+
 
 
 

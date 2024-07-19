@@ -6,14 +6,14 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 14:18:31 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/18 15:51:05 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/19 11:27:00 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
  
+int variavel =0;
 
-variavel =0;
 static void free_split(char **str)
 {
 	int i;
@@ -41,8 +41,6 @@ void met_b(n_status **list_a,n_status **list_b,int len)
 		//ft_printf("%d > %d\n",test, (*list_a)->number);
 		if( (*list_a)->number < test)
 		{
-			//ft_print_list(start,*list_b);
-
 			ft_pa(list_a,list_b);
 			i++;	
 		}
@@ -52,9 +50,7 @@ void met_b(n_status **list_a,n_status **list_b,int len)
 			i--;
 		}
 		 if (list_menor(test,*list_a) == false  || (*list_a)->next == NULL)
-		 {
 			break;
-		 }	
 	}
 }
 
@@ -89,6 +85,7 @@ void base_control(char **elements,int len)
 
 int	main(int ac,char **av)
 {
+	
 	if(ac == 2 )
 	{
 		char **cut;
