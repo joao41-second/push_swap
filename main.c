@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 14:18:31 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/19 11:27:00 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/19 11:58:42 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,6 @@ void met_b(n_status **list_a,n_status **list_b,int len)
 			break;
 	}
 }
-
-
  
 
 void base_control(char **elements,int len)

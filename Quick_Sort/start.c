@@ -34,8 +34,9 @@ void cange_elemente(n_status **list_a,n_status **list_b,int chek_index_menor ,in
 {
 	int i ;
 	i = -1;
-	while(++i <= chek_index_maior)
-		ft_pa(list_a,list_b);
+	// while(++i <= chek_index_maior)
+	// 	ft_pa(list_a,list_b);
+	i = ft_pa_loop_otimiz(chek_index_maior,list_a,list_b);
 	if(i > 0)
 		ft_rb(list_a,list_b);
 	while(++i <= chek_index_menor)
@@ -44,6 +45,7 @@ void cange_elemente(n_status **list_a,n_status **list_b,int chek_index_menor ,in
 	ft_pa(list_a, list_b);
 	ft_sb(list_a, list_b);
 	ft_pb(list_a, list_b);
+	
 	while(i-- >= 0)
 	{	
 		if(i != chek_index_maior && chek_index_maior +1 != chek_index_menor )
@@ -69,7 +71,7 @@ void cange_pivot(n_status **list_a,n_status **list_b,int  chek_index_maior,int p
 				ft_pa(list_a,list_b);
 			ft_ra(list_a,list_b);
 			while(i++ != loca)
-				ft_pa(list_a,list_b);
+			ft_pa(list_a,list_b);
 			ft_rra(list_a,list_b);
 			ft_rb(list_a,list_b);
 			while(--i > 0)
@@ -114,25 +116,19 @@ void aplic_quick_sort(n_status **list_a,n_status **list_b,int *pivot,int *len)
 		pivot[0] = set_start_new_pivot(*list_a,len[0]);
 		if (pivot[0] != valid_pivot(*list_a,len[0]) )
 			pivot[0] = valid_pivot(*list_a,len[0]);
+		
 	 	cange_pivot(list_a,list_b,chek_index_maior,pivot[0]);
 	}
 }
 
-void algorit(n_status **list_a,n_status **list_b ,int len)
-{
-	int pivot;
-	int i ;
-	i = -1;
-	pivot = set_start_pivot(*list_a,len);
-	ft_rra(list_a,list_b);
-	ft_pa(list_a,list_b);
-	while(++i != len/2 )
-		ft_pa(list_a,list_b);
-	ft_rrb(list_a,list_b);
-	ft_ra(list_a,list_b);
-	i = -1;
-	while(++i != len/2+1 )
-		ft_pb(list_a,list_b);
-	while(comfirm_list(*list_a)== 1) 
-		aplic_quick_sort(list_a,list_b,&pivot,&len);	
-}
+// void algorit(n_status **list_a,n_status **list_b ,int len)
+// {
+// 	int pivot;
+// 	int i ;
+// 	i = -1;
+	
+// 	pivot = set_max(*list_a,len); //set_start_pivot(*list_a,len);
+// 	//len = len/2;
+// 	while(comfirm_list(*list_a)== 1) 
+// 		aplic_quick_sort(list_a,list_b,&pivot,&len);	
+// }

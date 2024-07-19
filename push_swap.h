@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 11:44:14 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/19 11:25:08 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/19 14:45:25 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,5 +123,10 @@ void ft_rra(n_status **list_a,n_status **list_b);
 void ft_rrb(n_status **list_a,n_status **list_b);
 
 
+
+// update
+int ft_pa_loop_otimiz(int loop,n_status **list_a,n_status ** list_b);
+
+int set_max(n_status *list,int len);
 
 #endif

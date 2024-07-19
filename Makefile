@@ -6,14 +6,14 @@
 #    By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 06:17:31 by jperpect          #+#    #+#              #
-#    Updated: 2024/07/19 11:27:58 by jperpect         ###   ########.fr        #
+#    Updated: 2024/07/19 16:13:58 by jperpect         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FLGS = -Wall -Wextra -Werror
 
 FILES = main.c list_f.c list_f_2.c ft_validate_elements_list.c mvs/ft_s.c mvs/ft_pp.c mvs/ft_rrr.c \
-	valid_nb.c Quick_Sort/start.c Quick_Sort/set_pivot.c
+	valid_nb.c Quick_Sort/start.c Quick_Sort/set_pivot.c Quick_Sort/updat.c minha_ideia/start.c
  
 SRCS = $(FILES:.c=.o)
 
@@ -33,8 +33,8 @@ NAME = push_swap
 #.SILENT:
 
 all: $(NAME)
-%.o:%.c 
-	cc -c $(FLGS) -o $@ $<
+# %.o:%.c 
+# 	cc -c $(FLGS) -o $@ $<
 
 $(NAME) : $(SRCS)
 	cd libft && make compile && make 
