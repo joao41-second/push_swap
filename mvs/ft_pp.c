@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 14:56:19 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/19 10:09:31 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/23 13:46:29 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,18 +41,18 @@ void ft_start(n_status **list_a,n_status **list_b)
 }
 
 
-void ft_pa(n_status **list_a,n_status **list_b)
+void ft_pb(n_status **list_a,n_status **list_b)
 {
 	*list_a = ft_node_start(*list_a);
 	if(*list_b != NULL)
 		*list_b = ft_node_start(*list_b);
 	ft_start(list_a,list_b);
-	ft_printf("pa\n");
+	ft_printf("pb\n");
 	variavel++;
 }
 
 
-void ft_pb(n_status **list_a,n_status **list_b)
+void ft_pa(n_status **list_a,n_status **list_b)
 {
 	
 	// if (list_b == NULL)
@@ -60,7 +60,7 @@ void ft_pb(n_status **list_a,n_status **list_b)
  	// *list_a = ft_node_start(*list_a);
 	// if(*list_b != NULL)
 	// 	*list_b = ft_node_start(*list_b);
-	ft_printf("pb\n");
+	ft_printf("pa\n");
 	ft_start(list_b,list_a);
 	variavel++;
 }

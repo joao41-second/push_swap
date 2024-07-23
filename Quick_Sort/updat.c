@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 11:57:43 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/19 13:50:05 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/23 11:04:08 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int ft_pa_loop_otimiz(int loop,n_status **list_a,n_status ** list_b)
 		//ft_printf();
 		
 	}
-
+	
 	ft_print_list(*list_a,*list_b);
 	ft_printf("estou a procura de %d",not_muv);
 	

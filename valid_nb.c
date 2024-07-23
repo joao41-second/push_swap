@@ -43,7 +43,7 @@ int comfirm_list(n_status *list)
 {
     n_status *n;
 
-    while(list->next != NULL)
+    while(list->next->next != NULL)
     {
        
         list = list->next;
