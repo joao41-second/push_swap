@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 11:44:14 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/19 14:45:25 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/22 10:45:57 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 #include "libft/libft/libft.h"
 #include "libft/printf/ft_printf.h"
+#include <limits.h>
+
  
 #define true 1
 #define false  0

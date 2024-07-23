@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 13:36:29 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/02 17:18:50 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/22 18:23:21 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -220,7 +220,7 @@ void				ft_lstptint(t_list *lst, int gd);
 * @brief print elementes to list
 * @param lst list in first elemnte
 */
-void				ft_str_btis(int number_bist, char bits, char *bts);
+void				ft_str_btis(int number_bist, int bits, char *bts);
 /**
 * @brief save in char *bts repetiv bits of the bits 
 * @param nuber_bist nober de bits of the variabe ex int 32 char 8

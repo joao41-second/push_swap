@@ -6,13 +6,13 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/17 10:53:20 by jperpect          #+#    #+#             */
-/*   Updated: 2024/06/26 14:11:22 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/22 18:23:05 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_str_btis(int number_bist, char bits, char *bts)
+void	ft_str_btis(int number_bist, int bits, char *bts)
 {
 	int	i;
 

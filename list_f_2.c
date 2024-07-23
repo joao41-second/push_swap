@@ -10,6 +10,7 @@ void ft_print_list(n_status *list ,n_status *list_b)
 	while(list != NULL)
 	{
 		ft_printf("a %d ",list->number);
+		ft_printf(" index  = %d ",list->index);
 		// ft_printf(" next %x ",list->next);
 		// ft_printf(" pervios %x ",list->previous);
 		// if( list_b == NULL)
@@ -20,6 +21,7 @@ void ft_print_list(n_status *list ,n_status *list_b)
 	while(list_b != NULL)
 	{
 		ft_printf("b %d ",list_b->number);
+		ft_printf(" index  = %d ",list_b->index);
 		// ft_printf(" next %x ",list_b->next);
 		// ft_printf(" pervios %x ",list_b->previous);
 		ft_printf("\n");
