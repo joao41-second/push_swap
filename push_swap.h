@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 11:44:14 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/22 10:45:57 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/24 13:51:51 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,12 +75,15 @@ void	ft_node_add_inver(n_status **lst, n_status *new);
 
 void ft_print_list(n_status *list ,n_status *list_b);
 
-int list_size(n_status *list);
+int ft_list_size(n_status *list);
+
+
 
 
 n_status *valid_dob(n_status *list);
 
 n_status *validate_elements_list(char **elements,int len);
+
 
 
 

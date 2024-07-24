@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 11:30:56 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/23 16:47:16 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/24 16:38:46 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void ruta(n_status** list_a)
     {
         if(start->next == NULL)
         {
-           
            (*list_a)->previous = start;
             start->next = *list_a;
            break;
@@ -102,7 +101,7 @@ void ruta_ult(n_status** list_a)
 
 void ft_rra(n_status **list_a,n_status **list_b)
 {
-  if ( list_size(*list_a) != 0)
+  if ( ft_list_size(*list_a) != 0)
     ruta_ult(list_a); 
  if(list_b)
     ; 
@@ -113,8 +112,8 @@ void ft_rra(n_status **list_a,n_status **list_b)
 
 void ft_rrb(n_status **list_a,n_status **list_b)
 {
-    // ft_printf("rrb %d- \n",list_size(*list_b));
-   if ( list_size(*list_b) != 0)
+    // ft_printf("rrb %d- \n",ft_list_size(*list_b));
+   if ( ft_list_size(*list_b) != 0)
     ruta_ult(list_b);
  if(list_a)
     ;         

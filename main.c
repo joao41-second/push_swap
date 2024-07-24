@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 14:18:31 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/23 13:37:50 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/24 16:10:36 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void base_control(char **elements,int len)
 	
 	//ft_printf("\n");
 	//ft_print_list(list_a,list_b);
-	//ft_printf("\nos muvs sao = %d",variavel);
+	ft_printf("\nos muvs sao = %d",variavel);
 	//ft_node_clear(list_b);
 	ft_node_clear(list_a);
 }

@@ -6,7 +6,7 @@
 #    By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 06:17:31 by jperpect          #+#    #+#              #
-#    Updated: 2024/07/19 16:13:58 by jperpect         ###   ########.fr        #
+#    Updated: 2024/07/24 11:05:39 by jperpect         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,8 +37,8 @@ all: $(NAME)
 # 	cc -c $(FLGS) -o $@ $<
 
 $(NAME) : $(SRCS)
-	cd libft && make compile && make 
-	cc   $(FLGS) $(SRCS) $(LIB) -o $(NAME)
+	@cd libft && make compile && make 
+	@cc   $(FLGS) $(SRCS) $(LIB) -o $(NAME)
 
 	
 bonus: $(OBJECT_B) $(NAME)

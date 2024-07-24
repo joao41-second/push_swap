@@ -65,7 +65,7 @@ void cange_pivot(n_status **list_a,n_status **list_b,int  chek_index_maior,int p
 	}
 	if (loca > chek_index_maior)
 	{
-		if ( loca!= list_size(*list_a))
+		if ( loca!= ft_list_size(*list_a))
 		{
 			while(++i != chek_index_maior)
 				ft_pa(list_a,list_b);
