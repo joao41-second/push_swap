@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 14:56:19 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/23 13:46:29 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/25 14:25:47 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ void ft_start(n_status **list_a,n_status **list_b)
 	n_status *test;
 
 	if(*list_a == NULL)
+	{
+		ft_printf("fake");	
 		return;
+		}
 
 	test = *list_a;
 	

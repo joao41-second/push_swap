@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 11:30:56 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/24 16:38:46 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/25 14:26:04 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@ void ruta(n_status** list_a)
 {
 
     if (*list_a == NULL )
-        return;
+        {
+		ft_printf("fake");	
+		return;
+		}
     n_status *start;
     if((*list_a)->next == NULL )
     {
@@ -74,7 +77,10 @@ void ft_rr(n_status **list_a,n_status **list_b)
 void ruta_ult(n_status** list_a)
 {
     if(*list_a == NULL)
-        return;
+        {
+		ft_printf("fake");	
+		return;
+		}
  n_status *temp;
  n_status *ult;
  ult = NULL;

@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 16:12:20 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/24 18:43:33 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/07/26 08:16:17 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -133,15 +133,29 @@ void radix( n_status **list_a,n_status **list_b ,int len,n_status *list_loop)
 	b = 0;
 
 	
-	new_len =  len;
+	new_len =  len;	
 	
 	
 	
-	node_sav = ulti_node_une(*list_a,i);
-	
+	node_sav = ulti_node_une(*list_a,i-1);
+	//ft_printf("%d",node_sav);
 	len = ft_list_size(*list_a);
 	d = -1;
 
+	// if((*list_a)->index-1 ==(*list_a)->next->index)
+	// {
+	// 	ft_sa(list_a,list_b);
+	// }
+	// if((*list_a)->index+1 ==(*list_a)->next->index)
+	// {
+	// 	ft_pb(list_a,list_b);
+	// 	ft_pb(list_a,list_b);
+	// 	ft_rb(list_a,list_b);
+	// 	ft_pa(list_a,list_b);
+	// 	ft_pa(list_a,list_b);
+	// }
+
+	
 	if(ft_len_une(new_len) == 31-i)
 	{
 		// if(*list_b != NULL)
@@ -151,7 +165,8 @@ void radix( n_status **list_a,n_status **list_b ,int len,n_status *list_loop)
 		// // 	ft_pa(list_a,list_b);
 		// // }
 	}
-			
+	int conta;
+	conta = 0;
 	while ( ++d != len)
 	{
 		if(  order(*list_a,0,31-i) == '0')
@@ -161,8 +176,8 @@ void radix( n_status **list_a,n_status **list_b ,int len,n_status *list_loop)
 			{
 				//ft_printf("estamos na  ultima");
 				// //ft_print_list(*list_a,*list_b);
-				if(((*list_b)->index)+1 != (*list_b)->next->index)
-					ft_rb(list_a,list_b);
+				// if(((*list_b)->index)+1 != (*list_b)->next->index)
+				// 	ft_rb(list_a,list_b);
 				// if(((*list_b)->index)-1 == (*list_b)->next->index)
 				// 	ft_sb(list_a,list_b);
 			}
@@ -172,10 +187,16 @@ void radix( n_status **list_a,n_status **list_b ,int len,n_status *list_loop)
 		else if (order(*list_a,0,31-i) == '1' )
 		{
 			ft_ra(list_a,list_b);
+			conta++;
 		} 	
 	}
 
+	// while(--conta >= 0)
+	// {
+	// 	ft_rra(list_a,list_b);
+	// }
 
+	//ft_print_list(*list_a,*list_b);
 	if(*list_b != NULL)
 	{
 		//ft_printf("podemos restar a lista b");
@@ -184,39 +205,39 @@ void radix( n_status **list_a,n_status **list_b ,int len,n_status *list_loop)
 		int dub;
 		
 		i++;
-		change = ulti_node_une(*list_b,i);
+		// change = ulti_node_une(*list_b,i);
 		
-		b = ft_list_size(*list_b);
+		// b = ft_list_size(*list_b);
 		
-		if(  change == INT_MIN-1)
-		{
-			while (*list_b != NULL)
-			{
-			ft_pa(list_a,list_b);
-			}
-			return;
-			
-		}
-		
-		while (--b >= -1)
-		{
-			if(order(*list_b,0,31-i) == '0')
-			{
-				if(b >= 2)
-					ft_rb(list_a,list_b);
-				else
-					ft_pa(list_a,list_b);
-			}
-			else
-			{
-				ft_pa(list_a,list_b);
-			}
-		}
-		
-		// while (*list_b != NULL)
+		// if(  change == INT_MIN-1)
 		// {
+		// 	while (*list_b != NULL)
+		// 	{
 		// 	ft_pa(list_a,list_b);
+		// 	}
+		// 	return;
+			
 		// }
+		// conta = 0;
+		// while (--b >= -1)
+		// {
+		// 	if(order(*list_b,0,31-i) == '0')
+		// 	{
+		// 		if(b >= 2){
+		// 			ft_rb(list_a,list_b);}
+		// 		else
+		// 			ft_pa(list_a,list_b);
+		// 	}
+		// 	else
+		// 	{
+		// 		ft_pa(list_a,list_b);
+		// 	}
+		// }
+		
+		while (*list_b != NULL)
+		{
+			ft_pa(list_a,list_b);
+		}
 		
 		if(i == 32)
 			return;
@@ -264,7 +285,7 @@ void algorit(n_status **list_a,n_status **list_b ,int len)
 		
 		
 			
-		
+			ft_print_list(*list_a,*list_b);
 			radix(list_a,list_b,len,*list_a);
 			radix(list_a,list_b,len,*list_a);
 			radix(list_a,list_b,len,*list_a);
@@ -280,7 +301,7 @@ void algorit(n_status **list_a,n_status **list_b ,int len)
 		
 			
 			
-			// ft_print_list(*list_a,*list_b);
+			 ft_print_list(*list_a,*list_b);
 			// radix(list_a,list_b,len,*list_a);
 			// ft_print_list(*list_a,*list_b);
 			// radix(list_a,list_b,len,*list_a);
