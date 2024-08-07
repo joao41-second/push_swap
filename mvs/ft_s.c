@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 13:08:16 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/19 10:09:16 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/08/07 11:29:57 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ void ft_sa(n_status **list_a,n_status **list_b)
 	a->number = temp->number;
 	temp->number = tmp;
 	 ft_printf("sa\n");
-	variavel++;
+	
 }
 
 void ft_sb(n_status **list_a,n_status **list_b)
@@ -54,8 +54,7 @@ void ft_sb(n_status **list_a,n_status **list_b)
 	 b->number = temp->number;
 	 temp->number = tmp;
 	 ft_printf("sb\n");
-	 variavel++;
-	
+
 }
 
 
@@ -63,5 +62,5 @@ void ft_ss(n_status **list_a,n_status **list_b)
 {
 	ft_sa(list_a,list_b);
 	ft_sb(list_a,list_b);
-	variavel++;
+	
 }

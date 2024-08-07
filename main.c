@@ -6,13 +6,13 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 14:18:31 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/24 16:10:36 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/08/07 13:59:03 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
  
-int variavel =0;
+
 
 static void free_split(char **str)
 {
@@ -38,20 +38,11 @@ void base_control(char **elements,int len)
 	list_a = validate_elements_list(elements,len);
 	if(list_a == NULL)
 	{
-		ft_printf("error de elementos");
+		ft_printf("Error");
 		return;
 	}
-	//list_b = ft_new_list_null(list_b,len);
 	list_a = ft_node_start(list_a);
-	
-	//ft_print_list(list_a,list_b);
-	
 	algorit(&list_a,&list_b,len);
-	
-	//ft_printf("\n");
-	//ft_print_list(list_a,list_b);
-	ft_printf("\nos muvs sao = %d",variavel);
-	//ft_node_clear(list_b);
 	ft_node_clear(list_a);
 }
 
@@ -66,14 +57,13 @@ int	main(int ac,char **av)
 		len = 0;
 		cut = ft_split(av[1],' ');
 		if (cut == NULL)
-			return(ft_printf("error_aloc error"));
+			return(ft_printf("Error"));
 		while(cut[len] != NULL)
 			len++;
 		if(len == 1)
-			return(ft_printf("error_len < 2"));
+			return(ft_printf(""));
 		base_control(cut,len);
 		free_split(cut);
-		
 	}
 	else if(ac > 2)
 	{
@@ -81,7 +71,7 @@ int	main(int ac,char **av)
 		base_control(av,ac-1);
 	}
 	else
-		ft_printf("error");
+		ft_printf("Error");
 }
 
 

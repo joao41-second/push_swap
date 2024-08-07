@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 11:44:14 by jperpect          #+#    #+#             */
-/*   Updated: 2024/07/24 13:51:51 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/08/07 17:34:58 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@
 #define true 1
 #define false  0
 
-extern int variavel;
 
 
 typedef struct t_status
@@ -96,13 +95,20 @@ void algorit(n_status **list_a,n_status **list_b ,int len);
 
 
 
-int set_start_pivot( n_status *list,int len);
+// int set_start_pivot( n_status *list,int len);
 
-int set_start_new_pivot( n_status *list,int len);
+// int set_start_new_pivot( n_status *list,int len);
 
-int valid_pivot(n_status *list,int len);
+// int valid_pivot(n_status *list,int len);
 
-int locat_pivot(int pivot,n_status *list);
+// int locat_pivot(int pivot,n_status *list);
+
+
+void three(n_status **list_a,n_status **list_b);
+
+void five(n_status **list_a,n_status **list_b,int len);
+
+void list_index(n_status **list_a,int len);
 
 
 
