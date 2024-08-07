@@ -39,11 +39,14 @@ int list_menor(int i ,n_status *list)
 
 
 
+
+
+
 int comfirm_list(n_status *list)
 {
     n_status *n;
 
-    while(list->next->next != NULL)
+    while(list->next != NULL)
     {
        
         list = list->next;
