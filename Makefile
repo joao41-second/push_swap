@@ -6,14 +6,14 @@
 #    By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/05/03 06:17:31 by jperpect          #+#    #+#              #
-#    Updated: 2024/08/07 14:33:51 by jperpect         ###   ########.fr        #
+#    Updated: 2024/08/08 13:54:53 by jperpect         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 FLGS = -Wall -Wextra -Werror
 
-FILES = main.c list_f.c list_f_2.c ft_validate_elements_list.c mvs/ft_s.c mvs/ft_pp.c mvs/ft_rrr.c \
-	valid_nb.c  redux/start.c redux/three.c
+FILES = main.c list_f.c list_f_2.c ft_validate_elements_list.c mvs/ft_s.c mvs/ft_pp.c mvs/ft_rr.c mvs/ft_rrr.c 	\
+	valid_nb.c  radix/utilits.c radix/three.c radix/radix.c 
 SRCS = $(FILES:.c=.o)
 
 LIB = ./libft/libft.a ./libft/libftprintf.a

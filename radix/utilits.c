@@ -6,17 +6,17 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 16:12:20 by jperpect          #+#    #+#             */
-/*   Updated: 2024/08/08 12:02:20 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/08/08 14:18:59 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	set_min(n_status *list, int index)
+int	set_min(t_status *list, int index)
 {
 	long int	min;
 	int			i;
-	n_status	*save_min;
+	t_status	*save_min;
 
 	save_min = list;
 	i = -1;
@@ -34,7 +34,7 @@ int	set_min(n_status *list, int index)
 	return (min);
 }
 
-void	list_index_max_int(n_status *list)
+void	list_index_max_int(t_status *list)
 {
 	while (list->next != NULL)
 	{
@@ -44,7 +44,7 @@ void	list_index_max_int(n_status *list)
 	list->index = (long int)INT_MAX + 1;
 }
 
-void	list_index(n_status **list_a, int len)
+void	list_index(t_status **list_a, int len)
 {
 	int	i;
 
@@ -57,7 +57,7 @@ void	list_index(n_status **list_a, int len)
 	}
 }
 
-char	order(n_status *list_a, int bin_index)
+char	order(t_status *list_a, int bin_index)
 {
 	int		i;
 	char	bits[33];
@@ -68,7 +68,7 @@ char	order(n_status *list_a, int bin_index)
 	return (bits[bin_index]);
 }
 
-long int	ulti_node_une(n_status *list_a, int i)
+long int	ulti_node_une(t_status *list_a, int i)
 {
 	long int	save;
 

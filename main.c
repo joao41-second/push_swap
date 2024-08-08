@@ -6,73 +6,64 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 14:18:31 by jperpect          #+#    #+#             */
-/*   Updated: 2024/08/07 13:59:03 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/08/08 14:19:10 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
- 
 
-
-static void free_split(char **str)
+static void	free_split(char **str)
 {
-	int i;
-	i = -1;      
-	while(str[++i] != NULL)
-	{   
+	int	i;
+
+	i = -1;
+	while (str[++i] != NULL)
+	{
 		free(str[i]);
 	}
 	free(str);
-	
 }
 
-
- 
-
-void base_control(char **elements,int len)
+void	base_control(char **elements, int len)
 {
-	n_status *list_a;
-	n_status *list_b;
-	
+	t_status	*list_a;
+	t_status	*list_b;
+
 	list_b = NULL;
-	list_a = validate_elements_list(elements,len);
-	if(list_a == NULL)
+	list_a = validate_elements_list(elements, len);
+	if (list_a == NULL)
 	{
 		ft_printf("Error");
-		return;
+		return ;
 	}
 	list_a = ft_node_start(list_a);
-	algorit(&list_a,&list_b,len);
+	algorit(&list_a, &list_b, len);
 	ft_node_clear(list_a);
 }
 
-int	main(int ac,char **av)
+int	main(int ac, char **av)
 {
-	
-	if(ac == 2 )
+	char	**cut;
+	int		len;
+
+	if (ac == 2)
 	{
-		char **cut;
-		int len;
-		
 		len = 0;
-		cut = ft_split(av[1],' ');
+		cut = ft_split(av[1], ' ');
 		if (cut == NULL)
-			return(ft_printf("Error"));
-		while(cut[len] != NULL)
+			return (ft_printf("Error"));
+		while (cut[len] != NULL)
 			len++;
-		if(len == 1)
-			return(ft_printf(""));
-		base_control(cut,len);
+		if (len == 1)
+			return (ft_printf(""));
+		base_control(cut, len);
 		free_split(cut);
 	}
-	else if(ac > 2)
+	else if (ac > 2)
 	{
 		av++;
-		base_control(av,ac-1);
+		base_control(av, ac - 1);
 	}
 	else
 		ft_printf("Error");
 }
-
-
-

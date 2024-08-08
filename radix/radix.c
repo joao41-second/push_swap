@@ -6,13 +6,13 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 11:57:38 by jperpect          #+#    #+#             */
-/*   Updated: 2024/08/08 12:02:17 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/08/08 14:18:56 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	inverted_radix(n_status **list_a, n_status **list_b, int i)
+int	inverted_radix(t_status **list_a, t_status **list_b, int i)
 {
 	long int	change;
 	int			b;
@@ -41,7 +41,7 @@ int	inverted_radix(n_status **list_a, n_status **list_b, int i)
 	return (i);
 }
 
-void	radix(n_status **list_a, n_status **list_b, int len)
+void	radix(t_status **list_a, t_status **list_b, int len)
 {
 	static int	i = 0;
 	int			d;
@@ -62,7 +62,7 @@ void	radix(n_status **list_a, n_status **list_b, int len)
 	i = inverted_radix(list_a, list_b, i);
 }
 
-void	algorit(n_status **list_a, n_status **list_b, int len)
+void	algorit(t_status **list_a, t_status **list_b, int len)
 {
 	list_index(list_a, len);
 	if (len == 3)

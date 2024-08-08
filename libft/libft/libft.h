@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 # include <aio.h>
-
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
@@ -57,7 +56,7 @@ int					ft_atoi(const char *nptr);
 * @param nptr nuber in variabel char. 
 * @return nuber in variabel int. 
 */
-long int					ft_atol(const char *nptr);
+long int			ft_atol(const char *nptr);
 /**
 * @brief convert char in long int.
 * @param nptr nuber in variabel char. 
@@ -165,7 +164,6 @@ typedef struct s_list
 	void			*content;
 	struct s_list	*next;
 }					t_list;
-
 
 t_list				*ft_lstnew(void *content);
 /**

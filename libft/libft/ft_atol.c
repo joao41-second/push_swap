@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_atol.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/08/08 14:13:13 by jperpect          #+#    #+#             */
+/*   Updated: 2024/08/08 14:13:17 by jperpect         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static long int	v_nb(long int c)
@@ -15,10 +27,11 @@ static long int	sinals(long int n, long int sinal)
 	return (n);
 }
 
-static long int	r_nb(long int sinal, long int cont, const char *nptr, long int arit)
+static long int	r_nb(long int sinal, long int cont, const char *nptr,
+		long int arit)
 {
 	long int	n;
-	
+
 	n = 0;
 	if (sinal > 1)
 		return (0);
@@ -27,8 +40,8 @@ static long int	r_nb(long int sinal, long int cont, const char *nptr, long int a
 		n = n * 10 + (nptr[cont] - '0');
 		cont++;
 	}
-	if ((nptr[cont]+ '0') != '0')
-		return(0);
+	if ((nptr[cont] + '0') != '0')
+		return (0);
 	return (sinals(n, arit));
 }
 
@@ -42,7 +55,7 @@ long int	ft_atol(const char *nptr)
 	cont = 0;
 	arit = 1;
 	while (ft_isalnum(nptr[cont]) == 0)
-	{	
+	{
 		if (nptr[cont] == '-')
 			arit = 0;
 		if (nptr[cont] == '-' || nptr[cont] == '+')
@@ -55,8 +68,6 @@ long int	ft_atol(const char *nptr)
 			return (0);
 		cont++;
 	}
-	
-	
 	return (r_nb(sinal, cont, nptr, arit));
 }
 /**/
