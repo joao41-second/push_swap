@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:09:46 by jperpect          #+#    #+#             */
-/*   Updated: 2024/08/09 10:01:24 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/08/09 11:33:13 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ t_status	*valid_dob(t_status *list)
 		while (copy != NULL)
 		{
 			if (list->number == copy->number && list->index != copy->index)
-				return (NULL);
+				return (ft_node_clear(copy));
 			if (copy->next == NULL)
 				break ;
 			copy = copy->next;
