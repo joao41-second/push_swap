@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:09:46 by jperpect          #+#    #+#             */
-/*   Updated: 2024/08/08 14:19:03 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/08/09 10:01:24 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,8 +77,6 @@ t_status	*validate_elements_list(char **elements, int len)
 			list_a = ft_node_new(temp, i);
 			ft_node_add_front(&l_temp, list_a);
 		}
-		if (temp == 0 && elements[i][0] != '0')
-			return (ft_node_clear(l_temp));
 		if (temp > INT_MAX || temp < INT_MIN)
 			return (ft_node_clear(l_temp));
 	}
