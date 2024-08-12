@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:04:01 by jperpect          #+#    #+#             */
-/*   Updated: 2024/08/09 11:52:24 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/08/12 10:55:28 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	ft_node_add_front(t_status **lst, t_status *new)
 void	*ft_node_clear(t_status *tes)
 {
 	t_status	*temp;
+
 	tes = ft_node_start(tes);
 	while (tes != NULL)
 	{
