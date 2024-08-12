@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/08 11:57:38 by jperpect          #+#    #+#             */
-/*   Updated: 2024/08/08 14:18:56 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:53:10 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,8 @@ void	algorit(t_status **list_a, t_status **list_b, int len)
 	}
 	if (len <= 5)
 	{
-		five(list_a, list_b, len);
+		if (comfirm_list(*list_a) == 1)
+			five(list_a, list_b, len);
 		return ;
 	}
 	while (comfirm_list(*list_a) == 1 || *list_b != NULL)
