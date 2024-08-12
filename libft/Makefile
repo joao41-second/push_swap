@@ -6,7 +6,7 @@
 #    By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/06/07 11:50:39 by jperpect          #+#    #+#              #
-#    Updated: 2024/07/24 11:04:59 by jperpect         ###   ########.fr        #
+#    Updated: 2024/08/12 14:50:01 by jperpect         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,7 @@ clean:
 	
 compile:
 	@cd $(LIBFT_DIR) && make bonus
-	@mv $(LIBFT) .1
+	@mv $(LIBFT) .
 	@cd $(PRINTF_DIR) && make
 	@mv $(PRINTF) .
 
