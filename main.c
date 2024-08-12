@@ -6,13 +6,13 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/02 14:18:31 by jperpect          #+#    #+#             */
-/*   Updated: 2024/08/09 11:30:31 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/08/12 14:44:29 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-static void	free_split(char **str)
+static int	free_split(char **str)
 {
 	int	i;
 
@@ -22,6 +22,7 @@ static void	free_split(char **str)
 		free(str[i]);
 	}
 	free(str);
+	return (0);
 }
 
 void	base_control(char **elements, int len)
@@ -52,10 +53,10 @@ int	main(int ac, char **av)
 		cut = ft_split(av[1], ' ');
 		if (cut == NULL)
 			return (ft_printf("Error"));
+		if (cut[0] == NULL)
+			return (free_split(cut));
 		while (cut[len] != NULL)
 			len++;
-		if (len == 1)
-			return (ft_printf(""));
 		base_control(cut, len);
 		free_split(cut);
 	}
@@ -64,6 +65,4 @@ int	main(int ac, char **av)
 		av++;
 		base_control(av, ac - 1);
 	}
-	else
-		ft_printf("Error");
 }
