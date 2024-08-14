@@ -6,7 +6,7 @@
 /*   By: jperpect <jperpect@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/03 09:09:46 by jperpect          #+#    #+#             */
-/*   Updated: 2024/08/09 11:33:13 by jperpect         ###   ########.fr       */
+/*   Updated: 2024/08/14 10:51:12 by jperpect         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,11 @@ int	valid_char(char **elements, int len)
 			if (!(elements[i][d] == '-' || elements[i][d] == '+'))
 			{
 				if (ft_isdigit(elements[i][d]) == 0)
+					return (0);
+			}
+			if (elements[i][0] == '-' || elements[i][0] == '+')
+			{
+				if (ft_isdigit(elements[i][0 + 1]) == 0)
 					return (0);
 			}
 		}
